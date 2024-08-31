@@ -1,11 +1,28 @@
 {
   "name": "maplify",
+  "entryPoint": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": " A cool and easy scraper and anime mapper.",
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
   "module": "src/index.ts",
-  "type": "module",
+  "scripts": {
+    "build": "bun x tsc"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/string-similarity": "^4.0.2",
+    "bun-plugin-dts-auto": "^0.11.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.5",
+    "cheerio": "^1.0.0",
+    "string-similarity": "^4.0.4"
   }
 }
